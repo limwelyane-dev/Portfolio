@@ -8,7 +8,7 @@ import StarBackground from './components/StarBackground';
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/Portfolio">
         <Routes>
           <Route index element={<Home />} />
         </Routes>
