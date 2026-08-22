@@ -1,4 +1,4 @@
-import { ArrowDown } from "lucide-react"
+import { ArrowDown, ArrowUpRight } from "lucide-react"
 
 export const HomeSection = () => {
     return (
@@ -10,13 +10,58 @@ export const HomeSection = () => {
                         <span className="text-primary opacity-0 animate-fade-in-delay-1"> Limwel Ren</span>
                         <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2"> Yane</span>
                     </h1>
-                    <p className="text-lg mg:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-                        I'm a 23 years old Junior frontend developer who loves creating creative and functional websites, solving real-world problems. I enjoy turning ideas into interactive digital experiences using modern web technologies. I am looking for a long-term opportunity where I can contribute my skills while learning and growing professionally.
-                    </p>
+                    <p className="
+                    mt-5
+                    max-w-2xl
+                    mx-auto
+                    text-base md:text-lg
+                    leading-relaxed
+                    text-muted-foreground
+                    opacity-0
+                    animate-fade-in-delay-3
+                ">
+                    I build responsive and interactive web experiences
+                    using{" "}
+                    <span className="text-foreground font-medium">
+                        React, JavaScript, and Tailwind CSS
+                    </span>
+                    . I'm passionate about turning ideas into
+                    clean, functional, and user-friendly interfaces.
+                </p>
 
-                    <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-                        <a href="#projects" className="cosmic-button">
-                            View my Work
+                    <div className="
+                        mt-9
+                        flex flex-col sm:flex-row
+                        items-center justify-center
+                        gap-4
+                        opacity-0
+                        animate-fade-in-delay-4
+                    ">
+                        <a
+                            href="#projects"
+                            className="
+                                cosmic-button
+                                inline-flex
+                                items-center
+                                gap-2
+                            "
+                        >
+                            View My Work
+                            <ArrowUpRight size={17} />
+                        </a>
+
+                        <a
+                            href="#contact"
+                            className="
+                                px-6 py-2.5
+                                rounded-full
+                                border border-primary/40
+                                text-primary
+                                hover:bg-primary/10
+                                transition-all duration-300
+                            "
+                        >
+                            Get In Touch
                         </a>
                     </div>
                 </div>
