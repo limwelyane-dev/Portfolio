@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react"
 import ThemeToggle from "./ThemeToggle";
+import Profile from "/src/assets/limProfile.png"
 
 const navItems = [
     {name: "Home", href: "#hero"},
@@ -33,11 +34,14 @@ export const NavBar = () => {
             >
 
             <div className="container flex items-center justify-between">
-                <a className="text-xl font-bold text-primary flex items-center" href="#hero">
-                    <span className="relative z-10">
-                        <span className="text-glow text-foreground">Limwel</span>{" "}Portfolio
-                    </span>
-                </a>
+                <div className="flex flex-row gap-2 rounded-2xl">
+                    <img src={Profile} alt="Profile" className="w-10 h-10 rounded-2xl"/>
+                    <a className="text-xl font-bold text-primary flex items-center" href="#about">
+                        <span className="relative z-10">
+                            <span className="text-glow text-foreground">Limwel</span>{" "}Portfolio
+                        </span>
+                    </a>
+                </div>
 
                 <div className="hidden md:flex space-x-8">
                     {navItems.map((item, key) => (

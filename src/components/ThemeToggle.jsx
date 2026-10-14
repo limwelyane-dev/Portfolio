@@ -28,13 +28,22 @@ export default function ThemeToggle() {
     }
 
     return (
-
-        <button onClick={toggleTheme}
-        className=" p-2 rounded-full transition-colors duration-300 focus:outline-none">
-            
-            {isDarkMode ? (<Sun className="h-6 w-6 text-yellow-300"/>)
-            : (<Moon className="h-6 w-6 text-teal-900"/>)}
+        <button
+            onClick={toggleTheme}
+            aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+            className="flex items-center gap-2 p-2 rounded-full transition-colors duration-300 focus:outline-none"
+        >
+            {isDarkMode ? (
+                <>
+                    <Sun className="h-6 w-6 text-yellow-300" />
+                    <span>Light</span>
+                </>
+            ) : (
+                <>
+                    <Moon className="h-6 w-6 text-teal-900" />
+                    <span>Dark</span>
+                </>
+            )}
         </button>
-
     );
 }

@@ -1,6 +1,6 @@
 import { User, Code2, Database, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
-import resumePDF from "/public/ReactResume.pdf"
+import resumePDF from "/src/assets/Limwel_Resume.pdf"
 
 export const AboutSection = () => {
     const aboutCards = [
@@ -8,19 +8,19 @@ export const AboutSection = () => {
         icon: Code2,
         title: "Frontend Development",
         description:
-            "Building responsive and interactive interfaces using React, JavaScript, HTML, CSS, and Tailwind CSS.",
+            "Creating responsive, interactive, and user-friendly interfaces with React, JavaScript, and Tailwind CSS.",
     },
     {
         icon: Database,
-        title: "Modern Web Development",
+        title: "Backend Development",
         description:
-            "Working with REST APIs and React Query to fetch, manage, and display application data efficiently.",
+            "Building REST APIs and working with Node.js, Express.js, and PostgreSQL to handle application data.",
     },
     {
         icon: User,
-        title: "Professional Growth",
+        title: "Continuous Growth",
         description:
-            "Actively seeking a junior frontend opportunity where I can contribute, learn from experienced developers, and grow professionally.",
+            "Seeking a junior developer opportunity to contribute to real-world projects, collaborate with a team, and strengthen my development skills.",
     },
 ];
 
@@ -42,36 +42,38 @@ export const AboutSection = () => {
                     transition={{ duration: 0.5 }} 
                     viewport={{ once: false }}
             className="bg-blureffect/5 p-5 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
                 <div className="space-y-6">
-                    <h3 className="text-2xl font-semibold">Junior Frontend Developer</h3>
-                    
-                    <p>
-                        I'm a junior frontend developer passionate
-                        about creating responsive, interactive, and
-                        user-friendly websites. I enjoy transforming
-                        ideas and designs into functional digital
-                        experiences.
+                    <h3 className="text-2xl font-semibold">
+                        Web Developer
+                    </h3>
+
+                    <p className="text-muted-foreground leading-relaxed">
+                        I'm a Web developer passionate about building
+                        responsive, interactive, and user-friendly web
+                        applications. I enjoy turning ideas into functional
+                        digital experiences with clean interfaces and practical
+                        solutions.
                     </p>
 
-                    <p>
-                        My current focus is on modern frontend
-                        development using{" "}
+                    <p className="text-muted-foreground leading-relaxed">
+                        My primary focus is frontend development using{" "}
                         <span className="text-foreground font-medium">
-                            React, JavaScript, Tailwind CSS,
+                            React, JavaScript, and Tailwind CSS.
                         </span>{" "}
-                        and responsive web development. I'm also
-                        learning to build applications that work with
-                        APIs and manage server data using{" "}
+                        I also have experience with{" "}
                         <span className="text-foreground font-medium">
-                            React Query.
-                        </span>
+                            Node.js, Express.js, and PostgreSQL,
+                        </span>{" "}
+                        allowing me to build REST APIs, manage application
+                        data, and develop full-stack web applications.
                     </p>
 
-                    <p>
-                        I'm looking for an opportunity where I can
-                        contribute my current skills, work with a
-                        development team, and continue growing as a
-                        professional frontend developer.
+                    <p className="text-muted-foreground leading-relaxed">
+                        I'm currently seeking a junior developer opportunity
+                        where I can apply my skills, collaborate with a
+                        development team, contribute to meaningful projects,
+                        and continue growing professionally.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 pt-3">

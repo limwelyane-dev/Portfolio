@@ -2,13 +2,15 @@ import { motion } from "framer-motion";
 import {
     Code2,
     Palette,
-    Monitor,
+    Server,
     GitBranch,
     PenTool,
     CodeXml,
     Braces,
     Layers3,
     Globe,
+    Database,
+    Pen,
 } from "lucide-react";
 
 const skillGroups = [
@@ -24,13 +26,14 @@ const skillGroups = [
         ],
     },
     {
-        title: "Web Development",
-        description: "Creating functional and user-friendly web experiences.",
-        icon: Globe,
+        title: "Backend Development",
+        description: "Building APIs and managing server-side application data.",
+        icon: Server,
         skills: [
-            { name: "Responsive Web Design", icon: Monitor },
-            { name: "UI Implementation", icon: Layers3 },
-            { name: "API Integration", icon: Globe },
+            { name: "Node.js", icon: Code2 },
+            { name: "Express.js", icon: Server },
+            { name: "PostgreSQL", icon: Database },
+            { name: "REST API Development", icon: Globe },
         ],
     },
     {
@@ -41,6 +44,7 @@ const skillGroups = [
             { name: "Git & GitHub", icon: GitBranch },
             { name: "VS Code", icon: Code2 },
             { name: "Figma", icon: PenTool },
+            { name: "Motion Animation", icon: Pen}
         ],
     },
 ];
@@ -80,7 +84,6 @@ export const SkillSection = () => {
 
             <div className="relative container mx-auto max-w-6xl">
 
-                {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -88,11 +91,6 @@ export const SkillSection = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <span className="inline-flex items-center gap-2 px-4 py-2 mb-5 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm">
-                        <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                        My Toolkit
-                    </span>
-
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
                         Skills &{" "}
                         <span className="text-primary">
@@ -135,7 +133,6 @@ export const SkillSection = () => {
                                     hover:shadow-primary/10
                                 "
                             >
-                                {/* Glow */}
                                 <div
                                     className="
                                         absolute -top-20 -right-20
@@ -151,7 +148,6 @@ export const SkillSection = () => {
 
                                 <div className="relative">
 
-                                    {/* Category Header */}
                                     <div className="flex items-center gap-4 mb-4">
                                         <div className="
                                             flex items-center justify-center
@@ -173,12 +169,10 @@ export const SkillSection = () => {
                                         </div>
                                     </div>
 
-                                    {/* Description */}
-                                    <p className="text-sm text-muted-foreground leading-relaxed mb-7">
+                                    <p className="text-sm text-muted-foreground leading-relaxed mb-5">
                                         {group.description}
                                     </p>
 
-                                    {/* Skills */}
                                     <div className="space-y-3">
                                         {group.skills.map((skill) => {
                                             const SkillIcon = skill.icon;
@@ -218,14 +212,7 @@ export const SkillSection = () => {
                                                         {skill.name}
                                                     </span>
 
-                                                    <div className="ml-auto">
-                                                        <span className="
-                                                            block w-1.5 h-1.5
-                                                            rounded-full
-                                                            bg-primary/50
-                                                            group-hover/item:bg-primary
-                                                        " />
-                                                    </div>
+                                                   
                                                 </div>
                                             );
                                         })}

@@ -7,6 +7,7 @@
     --color-primary: hsl(var(--primary));
     --color-primary-foreground: hsl(var(--primary-foreground));
     --color-card: hsl(var(--card));
+    --color-gradient: hsl(var(--background-gradient));
     
     --animate-float: float 6s ease-in-out infinite;
     --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
@@ -174,4 +175,22 @@
     margin: 0 auto;
     padding: 0;
     text-align: center;
+}
+.sideAni {
+  display: flex;
+  width: max-content;
+  animation: sideAni 30s linear infinite;
+}
+
+.sideAni:hover {
+  animation-play-state: paused;
+}
+
+@keyframes sideAni {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }

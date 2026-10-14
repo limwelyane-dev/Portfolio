@@ -5,11 +5,12 @@ import {
     Sparkles,
 } from "lucide-react";
 
-import BMIImage from "/src/assets/BMICalculator.png";
+import CalculatorImage from "/src/assets/Calculator.png";
 import CrochetImage from "/src/assets/CrochetWeb.png";
 import FerrariImage from "/src/assets/FerrariWeb.png";
+import TechVaultImage from "/src/assets/TecchVault.png";
 
-const projects = [
+export const projects = [
     {
         id: "01",
         title: "Shanelle Crochet",
@@ -20,9 +21,22 @@ const projects = [
         tags: ["React", "JavaScript", "Tailwind CSS", "Framer Motion"],
         liveUrl: "https://limwelyane-dev.github.io/shanelleCrochet/",
         githubUrl: "",
+        features: ["Product Catalog","Product Search","Brand Story and Customer Reviews","Checkout System","Order Management","User registration and login"],
     },
     {
         id: "02",
+        title: "TechVault E-Commerce App",
+        category: "E-Commerce Application",
+        description:
+            "TechVault is a full-stack electronics e-commerce platform where users can browse products, manage their shopping carts, place orders, and submit product reviews.",
+        image: TechVaultImage,
+        tags: ["React", "JavaScript", "Tailwind CSS", "Framer Motion", "Node.js", "Express", "PostgreSQL", "JWT"],
+        liveUrl: "tech-vault-azure.vercel.app",
+        githubUrl: "",
+        features: ["User registration and login","Shopping cart and checkout","Admin dashboard and order management","Product image uploads and customer reviews"],
+    },
+    {
+        id: "03",
         title: "Ferrari Landing Page",
         category: "Frontend Project",
         description:
@@ -31,17 +45,19 @@ const projects = [
         tags: ["React", "JavaScript", "Tailwind CSS", "Framer Motion"],
         liveUrl: "https://limwelyane-dev.github.io/PersonalFerrariLandingPage/",
         githubUrl: "",
+        features: ["Cinematic Video Background","Smooth Scroll Animations","Luxury-Inspired UI","Responsive Design"],
     },
     {
-        id: "03",
-        title: "BMI Calculator",
+        id: "04",
+        title: "Calculator",
         category: "React Application",
         description:
             "A responsive BMI calculator that allows users to enter their height and weight and instantly receive their BMI result and health category.",
-        image: BMIImage,
+        image: CalculatorImage,
         tags: ["React", "JavaScript", "Tailwind CSS", "Framer Motion"],
-        liveUrl: "https://limwelyane-dev.github.io/BMI-Calculator/",
+        liveUrl: "https://limwelyane-dev.github.io/My_Calculator/",
         githubUrl: "",
+        features: ["Interactive User Interface","Dynamic Results Display","Toggle Effect","Accurate Calculation"],
     },
 ];
 
@@ -75,18 +91,6 @@ export const ProjectSection = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <span className="
-                        inline-flex items-center gap-2
-                        px-4 py-2
-                        mb-5
-                        rounded-full
-                        border border-primary/20
-                        bg-primary/5
-                        text-sm text-primary
-                    ">
-                        <Sparkles size={15} />
-                        My Work
-                    </span>
 
                     <h2 className="
                         text-4xl md:text-5xl
@@ -112,13 +116,12 @@ export const ProjectSection = () => {
                     </p>
                 </motion.div>
 
-                {/* Projects */}
                 <div className="
                     grid
                     grid-cols-1
                     md:grid-cols-2
-                    lg:grid-cols-3
-                    gap-7
+                    lg:grid-cols-4
+                    gap-5
                 ">
                     {projects.map((project, index) => (
                         <motion.article
@@ -289,6 +292,7 @@ export const ProjectSection = () => {
                                     gap-2
                                     mb-6
                                 ">
+                        
                                     {project.tags.map((tag) => (
                                         <span
                                             key={tag}
