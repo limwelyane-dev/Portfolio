@@ -1,6 +1,6 @@
 import { User, Code2, Database, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
-import resumePDF from "/src/assets/Limwel_Resume.pdf"
+import resumePDF from "/src/assets/Web_dev_Resume.pdf"
 
 export const AboutSection = () => {
     const aboutCards = [
