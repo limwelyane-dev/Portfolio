@@ -20,7 +20,7 @@ export const AboutSection = () => {
         icon: User,
         title: "Continuous Growth",
         description:
-            "Seeking a junior developer opportunity to contribute to real-world projects, collaborate with a team, and strengthen my development skills.",
+            "Seeking a Web developer opportunity to contribute to real-world projects, collaborate with a team, and strengthen my development skills.",
     },
 ];
 
@@ -70,7 +70,7 @@ export const AboutSection = () => {
                     </p>
 
                     <p className="text-muted-foreground leading-relaxed">
-                        I'm currently seeking a junior developer opportunity
+                        I'm currently seeking a Web developer opportunity
                         where I can apply my skills, collaborate with a
                         development team, contribute to meaningful projects,
                         and continue growing professionally.
