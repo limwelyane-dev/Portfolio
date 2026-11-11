@@ -156,8 +156,6 @@ export const AboutSection = () => {
                                     />
 
                                     <div className="relative flex gap-5">
-
-                                        {/* Icon */}
                                         <div
                                             className="
                                                 flex-shrink-0
@@ -174,7 +172,6 @@ export const AboutSection = () => {
                                             <Icon size={22} />
                                         </div>
 
-                                        {/* Content */}
                                         <div>
                                             <h4 className="text-lg font-semibold mb-2">
                                                 {card.title}
