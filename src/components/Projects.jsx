@@ -9,6 +9,7 @@ import CalculatorImage from "/src/assets/Calculator.png";
 import CrochetImage from "/src/assets/CrochetWeb.png";
 import FerrariImage from "/src/assets/FerrariWeb.png";
 import TechVaultImage from "/src/assets/TecchVault.png";
+import Quickbite from "/src/assets/quickbite.png"
 
 export const projects = [
     {
@@ -58,6 +59,18 @@ export const projects = [
         liveUrl: "https://limwelyane-dev.github.io/My_Calculator/",
         githubUrl: "",
         features: ["Interactive User Interface","Dynamic Results Display","Toggle Effect","Accurate Calculation"],
+    },
+    {
+        id: "05",
+        title: "QuickBite Foodhub",
+        category: "E-Commerce Application",
+        description:
+            "A food ordering platform that allows customers to browse a variety of delicious meals, explore food options, and conveniently place orders online. It provides a simple, user-friendly experience designed to make ordering food faster, easier, and more convenient.",
+        image: Quickbite,
+        tags: ["React", "JavaScript", "Tailwind CSS", "Framer Motion"],
+        liveUrl: " https://limwelyane-dev.github.io/QuickBitePH/",
+        githubUrl: " https://limwelyane-dev.github.io/QuickBitePH/",
+        features: ["User Authentication","Food Browsing","Order Management","Shopping Cart"],
     },
 ];
 
