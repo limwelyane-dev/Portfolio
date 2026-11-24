@@ -97,7 +97,7 @@ export const HomeSection = () => {
                     mt-5
                     max-w-3xl
                     mx-auto
-                    text-base md:text-lg
+                    text-base md:text-md
                     leading-relaxed
                     text-muted-foreground
                     opacity-0
@@ -108,10 +108,10 @@ export const HomeSection = () => {
                     <span className="text-foreground font-medium">
                         React, JavaScript, and Tailwind CSS
                     </span>
-                    {" "} with additional experience in{" "}<span className="text-foreground font-medium">
+                    {" "} with additional knowledge in{" "}<span className="text-foreground font-medium">
                        Node.js, Express.js, and PostgreSQL.
                     </span> I'm passionate about turning ideas into
-                    clean, functional, and user-friendly interfaces while continuously improving my skills in frontend and full-stack development.
+                    clean, functional, and user-friendly interfaces while continuously improving my skills in frontend development.
                 </p>
                 <div className="flex flex-row gap-4 items-center justify-center opacity-0 animate-fade-in-delay-4">
                         <a
@@ -146,8 +146,8 @@ export const HomeSection = () => {
             </div>
 
             <div className="w-full overflow-visible py-2 -mb-30">
-              <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-background to-transparent sm:w-32" />
-              <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-background to-transparent sm:w-32" />
+              <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-linear-to-r from-background to-transparent sm:w-32" />
+              <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-linear-to-l from-background to-transparent sm:w-32" />
 
                 <div className=" relative sideAni flex gap-6 w-max px-3 ">
                 {featuredProjects.map((project, index) => (

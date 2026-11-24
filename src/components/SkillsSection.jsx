@@ -16,7 +16,6 @@ import {
 const skillGroups = [
     {
         title: "Frontend",
-        description: "Building responsive and interactive user interfaces.",
         icon: Code2,
         skills: [
             { name: "HTML & CSS", icon: CodeXml },
@@ -27,18 +26,16 @@ const skillGroups = [
     },
     {
         title: "Backend Development",
-        description: "Building APIs and managing server-side application data.",
         icon: Server,
         skills: [
             { name: "Node.js", icon: Code2 },
             { name: "Express.js", icon: Server },
-            { name: "PostgreSQL", icon: Database },
+            { name: "MongoDB", icon: Database },
             { name: "REST API Development", icon: Globe },
         ],
     },
     {
         title: "Tools",
-        description: "Tools I use throughout my development workflow.",
         icon: GitBranch,
         skills: [
             { name: "Git & GitHub", icon: GitBranch },
@@ -79,7 +76,6 @@ export const SkillSection = () => {
             id="skills"
             className="relative overflow-hidden py-28 px-4 bg-secondary/20"
         >
-            {/* Background decoration */}
             <div className="absolute top-20 left-1/2 -translate-x-1/2 w-80 h-80 bg-primary/10 rounded-full blur-[120px]" />
 
             <div className="relative container mx-auto max-w-6xl">
@@ -91,7 +87,7 @@ export const SkillSection = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+                    <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
                         Skills &{" "}
                         <span className="text-primary">
                             Technologies
@@ -104,7 +100,6 @@ export const SkillSection = () => {
                     </p>
                 </motion.div>
 
-                {/* Skill Groups */}
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -169,10 +164,6 @@ export const SkillSection = () => {
                                         </div>
                                     </div>
 
-                                    <p className="text-sm text-muted-foreground leading-relaxed mb-5">
-                                        {group.description}
-                                    </p>
-
                                     <div className="space-y-3">
                                         {group.skills.map((skill) => {
                                             const SkillIcon = skill.icon;
@@ -182,7 +173,7 @@ export const SkillSection = () => {
                                                     key={skill.name}
                                                     className="
                                                         flex items-center gap-3
-                                                        p-3
+                                                        p-2
                                                         rounded-xl
                                                         border border-border/40
                                                         bg-background/30

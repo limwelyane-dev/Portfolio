@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
 import {
     ArrowUpRight,
-    ExternalLink,
-    Sparkles,
+    ExternalLink
 } from "lucide-react";
 
 import CalculatorImage from "/src/assets/Calculator.png";
 import CrochetImage from "/src/assets/CrochetWeb.png";
 import FerrariImage from "/src/assets/FerrariWeb.png";
 import TechVaultImage from "/src/assets/TecchVault.png";
-import Quickbite from "/src/assets/quickbite.png"
+import Quickbite from "/src/assets/quickbite.png";
+import ToDoList from "/src/assets/ToDoList.png"
 
 export const projects = [
     {
@@ -19,20 +19,18 @@ export const projects = [
         description:
             "A responsive crochet e-commerce application where users can browse products, search items, manage a shopping cart, and place orders.",
         image: CrochetImage,
-        tags: ["React", "JavaScript", "Tailwind CSS", "Framer Motion"],
         liveUrl: "https://limwelyane-dev.github.io/shanelleCrochet/",
         githubUrl: "",
         features: ["Product Catalog","Product Search","Brand Story and Customer Reviews","Checkout System","Order Management","User registration and login"],
     },
     {
         id: "02",
-        title: "TechVault E-Commerce App",
+        title: "TechVault E-Commerce",
         category: "E-Commerce Application",
         description:
             "TechVault is a full-stack electronics e-commerce platform where users can browse products, manage their shopping carts, place orders, and submit product reviews.",
         image: TechVaultImage,
-        tags: ["React", "JavaScript", "Tailwind CSS", "Framer Motion", "Node.js", "Express", "PostgreSQL", "JWT"],
-        liveUrl: "tech-vault-azure.vercel.app",
+        liveUrl: "https://tech-vault-azure.vercel.app/login",
         githubUrl: "",
         features: ["User registration and login","Shopping cart and checkout","Admin dashboard and order management","Product image uploads and customer reviews"],
     },
@@ -43,7 +41,6 @@ export const projects = [
         description:
             "A premium automotive landing page focused on immersive visuals, smooth animations, responsive layouts, and an interactive user experience.",
         image: FerrariImage,
-        tags: ["React", "JavaScript", "Tailwind CSS", "Framer Motion"],
         liveUrl: "https://limwelyane-dev.github.io/PersonalFerrariLandingPage/",
         githubUrl: "",
         features: ["Cinematic Video Background","Smooth Scroll Animations","Luxury-Inspired UI","Responsive Design"],
@@ -55,7 +52,6 @@ export const projects = [
         description:
             "A responsive BMI calculator that allows users to enter their height and weight and instantly receive their BMI result and health category.",
         image: CalculatorImage,
-        tags: ["React", "JavaScript", "Tailwind CSS", "Framer Motion"],
         liveUrl: "https://limwelyane-dev.github.io/My_Calculator/",
         githubUrl: "",
         features: ["Interactive User Interface","Dynamic Results Display","Toggle Effect","Accurate Calculation"],
@@ -67,27 +63,37 @@ export const projects = [
         description:
             "A food ordering platform that allows customers to browse a variety of delicious meals, explore food options, and conveniently place orders online. It provides a simple, user-friendly experience designed to make ordering food faster, easier, and more convenient.",
         image: Quickbite,
-        tags: ["React", "JavaScript", "Tailwind CSS", "Framer Motion"],
         liveUrl: " https://limwelyane-dev.github.io/QuickBitePH/",
-        githubUrl: " https://limwelyane-dev.github.io/QuickBitePH/",
+        githubUrl: "",
         features: ["User Authentication","Food Browsing","Order Management","Shopping Cart"],
+    },
+    {
+        id: "06",
+        title: "To Do List",
+        category: "Frontend Project",
+        description:
+            "A task management app with secure authentication, task creation, editing, and deletion. Features priority levels, due dates, progress tracking, calendar view, and dark mode.",
+        image: ToDoList,
+        liveUrl: "https://to-do-list-nine-opal-65.vercel.app/login",
+        githubUrl: "",
+        features: ["User Authentication","Task creation","Calendar view"," Progress tracking", "Dark mode"],
     },
 ];
 
 export const ProjectSection = () => {
+
     return (
         <section
             id="projects"
             className="relative overflow-hidden py-28 px-4"
         >
-            {/* Background glow */}
             <div className="
                 absolute
                 top-20
                 left-1/2
                 -translate-x-1/2
-                w-[500px]
-                h-[300px]
+                w-125
+                h-75
                 rounded-full
                 bg-primary/5
                 blur-[120px]
@@ -95,8 +101,6 @@ export const ProjectSection = () => {
             " />
 
             <div className="relative container mx-auto max-w-6xl">
-
-                {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -130,11 +134,9 @@ export const ProjectSection = () => {
                 </motion.div>
 
                 <div className="
-                    grid
-                    grid-cols-1
-                    md:grid-cols-2
-                    lg:grid-cols-4
-                    gap-5
+                    columns-2
+                    sm:columns-3
+                
                 ">
                     {projects.map((project, index) => (
                         <motion.article
@@ -161,6 +163,7 @@ export const ProjectSection = () => {
                             className="
                                 group
                                 relative
+                                mb-2
                                 overflow-hidden
                                 rounded-2xl
                                 border border-border/50
@@ -172,7 +175,45 @@ export const ProjectSection = () => {
                                 hover:shadow-primary/10
                             "
                         >
-                            {/* Project Image */}
+                            <div className="
+                                absolute
+                                inset-0
+                                z-20
+                                flex
+                                items-center
+                                justify-center
+                                bg-black/60
+                                opacity-0
+                                group-hover:opacity-100
+                                transition-all
+                                duration-300
+                            ">
+                                <a
+                                    href={project.liveUrl.trim()}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="
+                                        flex
+                                        items-center
+                                        gap-2
+                                        text-white
+                                        font-semibold
+                                        text-sm
+                                        px-5
+                                        py-3
+                                        rounded-full
+                                        border
+                                        border-white/50
+                                        hover:bg-white
+                                        hover:text-black
+                                        transition-all
+                                    "
+                                >
+                                    View Live Website
+                                    <ExternalLink size={16} />
+                                </a>
+                            </div>
+                            
                             <div className="
                                 relative
                                 h-56
@@ -213,7 +254,6 @@ export const ProjectSection = () => {
                                     </div>
                                 )}
 
-                                {/* Image overlay */}
                                 <div className="
                                     absolute
                                     inset-0
@@ -224,25 +264,8 @@ export const ProjectSection = () => {
                                     opacity-60
                                 " />
 
-                                {/* Project number */}
-                                <div className="
-                                    absolute
-                                    top-4
-                                    left-4
-                                    px-3
-                                    py-1.5
-                                    rounded-full
-                                    bg-black/40
-                                    backdrop-blur-md
-                                    border border-white/10
-                                    text-white
-                                    text-xs
-                                    font-medium
-                                ">
-                                    {project.id}
-                                </div>
+                                
 
-                                {/* Category */}
                                 <div className="
                                     absolute
                                     bottom-4
@@ -255,7 +278,6 @@ export const ProjectSection = () => {
                                 </div>
                             </div>
 
-                            {/* Content */}
                             <div className="p-6">
 
                                 <div className="
@@ -266,7 +288,7 @@ export const ProjectSection = () => {
                                     mb-3
                                 ">
                                     <h3 className="
-                                        text-xl
+                                        text-md
                                         font-semibold
                                         tracking-tight
                                         group-hover:text-primary
@@ -278,7 +300,7 @@ export const ProjectSection = () => {
                                     <ArrowUpRight
                                         size={20}
                                         className="
-                                            flex-shrink-0
+                                            shrink-0
                                             text-muted-foreground
                                             transition-all
                                             duration-300
@@ -288,109 +310,11 @@ export const ProjectSection = () => {
                                         "
                                     />
                                 </div>
-
-                                <p className="
-                                    text-sm
-                                    text-muted-foreground
-                                    leading-relaxed
-                                    mb-5
-                                ">
-                                    {project.description}
-                                </p>
-
-                                {/* Tags */}
-                                <div className="
-                                    flex
-                                    flex-wrap
-                                    gap-2
-                                    mb-6
-                                ">
-                        
-                                    {project.tags.map((tag) => (
-                                        <span
-                                            key={tag}
-                                            className="
-                                                px-2.5
-                                                py-1
-                                                rounded-full
-                                                bg-primary/5
-                                                border border-primary/10
-                                                text-xs
-                                                text-muted-foreground
-                                            "
-                                        >
-                                            {tag}
-                                        </span>
-                                    ))}
-                                </div>
-
-                                {/* Buttons */}
-                                <div className="
-                                    flex
-                                    items-center
-                                    gap-3
-                                ">
-                                    {project.liveUrl && (
-                                        <a
-                                            href={project.liveUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="
-                                                flex-1
-                                                inline-flex
-                                                items-center
-                                                justify-center
-                                                gap-2
-                                                px-4
-                                                py-2.5
-                                                rounded-xl
-                                                bg-primary
-                                                text-primary-foreground
-                                                text-sm
-                                                font-medium
-                                                transition-all
-                                                duration-300
-                                                hover:opacity-90
-                                                hover:shadow-lg
-                                                hover:shadow-primary/20
-                                            "
-                                        >
-                                            Live Demo
-                                            <ExternalLink size={16} />
-                                        </a>
-                                    )}
-
-                                    {project.githubUrl && (
-                                        <a
-                                            href={project.githubUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="
-                                                inline-flex
-                                                items-center
-                                                justify-center
-                                                w-11
-                                                h-11
-                                                rounded-xl
-                                                border
-                                                border-border/60
-                                                text-muted-foreground
-                                                hover:text-primary
-                                                hover:border-primary/40
-                                                transition-all
-                                            "
-                                            aria-label={`View ${project.title} source code`}
-                                        >
-                                            
-                                        </a>
-                                    )}
-                                </div>
                             </div>
                         </motion.article>
                     ))}
                 </div>
 
-                {/* Bottom */}
                 <motion.div
                     initial={{
                         opacity: 0,
